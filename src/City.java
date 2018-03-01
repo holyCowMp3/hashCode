@@ -16,6 +16,6 @@ public class City {
         rides = Integer.parseInt(strings[4]);
         bonus = Integer.parseInt(strings[5]);
         steps = Integer.parseInt(strings[6]);
-        
+
     }
 }
