@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Vehicle {
     private int row;
     private int column;
+    private int startTtl;
     private int ttl;
     private ArrayList<Road> roads;
 
@@ -12,6 +13,7 @@ public class Vehicle {
         this.row = 0;
         this.column = 0;
         this.ttl = steps;
+        this.startTtl=steps;
 
         this.roads = new ArrayList<Road>();
 
@@ -23,10 +25,17 @@ public class Vehicle {
     }
 
     public void rideRoad(Road road){
+        addRoad(road);
         int stepsToStart = Math.abs(road.getStartRow()-row) + Math.abs(road.getStartColumn()-column);
         row = road.getStartRow();
         column = road.getStartColumn();
         ttl-=stepsToStart;
+        if(startTtl-ttl>road.getStartTime()){
+            ttl-=road.getStartTime()-(startTtl-ttl);
+        }
+        ttl-=Math.abs(road.getEndRow()-road.getStartRow()) + Math.abs(road.getEndColumn()-road.getStartColumn());
+        row=road.getEndRow();
+        column=road.getEndColumn();
 
     }
 
