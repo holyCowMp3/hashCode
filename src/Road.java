@@ -20,7 +20,7 @@ public class Road {
         this.endColumn = Integer.parseInt(strings[3]);
         this.startTime = Integer.parseInt(strings[4]);
         this.endTime = Integer.parseInt(strings[5]);
-        this.roadLength = Math.abs(endRow-startRow) + Math.abs(endColumn-endColumn);
+        this.roadLength = Math.abs(endRow-startRow) + Math.abs(endColumn-startColumn);
         this.idRoad = roadsCout++;
 
 
