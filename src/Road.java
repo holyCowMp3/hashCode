@@ -11,6 +11,7 @@ public class Road {
    private int roadLength;
 
 
+
     public Road(String input) {
         String[] strings = input.split(" ");
         this.startRow = Integer.parseInt(strings[0]);

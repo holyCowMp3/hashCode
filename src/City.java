@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class City {
@@ -7,6 +8,7 @@ public class City {
     private int rides;
     private int bonus;
     private int steps;
+    private ArrayList<Road>;
 
     public City(List<String> list) {
         String[] strings = list.get(0).split(" ");
@@ -16,5 +18,7 @@ public class City {
         rides = Integer.parseInt(strings[4]);
         bonus = Integer.parseInt(strings[5]);
         steps = Integer.parseInt(strings[6]);
+        list.remove(0);
+        list.
     }
 }
