@@ -9,11 +9,11 @@ public class Vehicle {
 
 
     public Vehicle(int steps){
-        row = 0;
-        column = 0;
-        ttl = steps;
+        this.row = 0;
+        this.column = 0;
+        this.ttl = steps;
 
-        roads = new ArrayList<Road>();
+        this.roads = new ArrayList<Road>();
 
     }
 
