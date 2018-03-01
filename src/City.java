@@ -54,7 +54,11 @@ public class City {
         return steps;
     }
 
-    public int getVehicles() {
+    public ArrayList<Vehicle> getVehicles() {
         return vehicles;
+    }
+
+    public int getNumberOfVehicles() {
+        return numberOfVehicles;
     }
 }
