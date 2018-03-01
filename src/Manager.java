@@ -7,9 +7,15 @@ public class Manager {
         this.city=city;
     }
 
+
     public void start(){
 
 
+
     }
+
+
+
+
 
 }

@@ -61,4 +61,7 @@ public class Road {
     public static int getRoadsCout() {
         return roadsCout;
     }
+    public boolean checkRoad(int i){
+        return this.startTime<i;
+    }
 }
