@@ -11,9 +11,9 @@ public class City {
     private int rides;
     private int bonus;
     private int steps;
-    private ArrayList<Road> roads;
+    private ArrayList<Road> roads = new ArrayList<>();
 
-    private ArrayList<Vehicle> vehicles;
+    private ArrayList<Vehicle> vehicles = new ArrayList<>();
 
     public City(List<String> list) {
         String[] strings = list.get(0).split(" ");
@@ -22,13 +22,13 @@ public class City {
         this.rides = Integer.parseInt(strings[3]);
         this.bonus = Integer.parseInt(strings[4]);
         this.steps = Integer.parseInt(strings[5]);
-        System.out.println(strings[2]);
-        for (int i =0 ; i< Integer.parseInt(strings[2]);i++){
+
+        for (int i =0 ; i < Integer.parseInt(strings[2]);i++){
             this.vehicles.add(new Vehicle(steps));
         }
-        System.out.println(list.get(0));
+
         list.remove(0);
-        System.out.println(list.get(0));
+
         list.stream().forEach(i -> roads.add(new Road(i)));
         this.roads.sort((a,b) -> a.getStartTime()-b.getStartTime());
 
