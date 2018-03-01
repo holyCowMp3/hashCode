@@ -1,6 +1,7 @@
 
 public class Road {
-
+   private static int roadsCout;
+   private int idRoad;
    private int startRow;
    private int startColumn;
    private int endRow;
@@ -19,7 +20,13 @@ public class Road {
         this.startTime = Integer.parseInt(strings[4]);
         this.endTime = Integer.parseInt(strings[5]);
         this.roadLength = Math.abs(endRow-startRow) + Math.abs(endColumn-endColumn);
+        this.idRoad = roadsCout++;
+
+
     }
+
+
+
 
 
 }
