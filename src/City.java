@@ -22,7 +22,10 @@ public class City {
         this.rides = Integer.parseInt(strings[3]);
         this.bonus = Integer.parseInt(strings[4]);
         this.steps = Integer.parseInt(strings[5]);
-        this.vehicles.addAll(IntStream.range(0, Integer.parseInt(strings[2])).mapToObj( i -> new Vehicle(this.steps)).collect(Collectors.toList()));
+        System.out.println(strings[2]);
+        for (int i =0 ; i< Integer.parseInt(strings[2]);i++){
+            this.vehicles.add(new Vehicle(steps));
+        }
         System.out.println(list.get(0));
         list.remove(0);
         System.out.println(list.get(0));
