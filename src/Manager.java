@@ -35,7 +35,9 @@ public class Manager {
 
 
     public void out() throws Exception{
-        city.getVehicles().stream().filter(i -> i.getRoads().size()!=0).forEach(i -> lines.add(new String(city.getVehicles().indexOf(i) +" " + i.getRoads().stream().map(j -> j.getIdRoad()+"").collect(Collectors.joining(" ")))));
+        for (int j=0; j<city.getVehicles().size(); j++ ){
+            city.getVehicles().stream().forEach(i -> lines.add(i.getRoads().size() + i.getRoads().stream().map(z -> z.getIdRoad() ).collect(Collectors.joining(" "))));
+        }
         Path file = Paths.get(Manager.class.getResource("1.out").toURI());
         Files.write(file,lines);
     }
