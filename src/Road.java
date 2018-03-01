@@ -25,8 +25,39 @@ public class Road {
 
     }
 
+    public int getIdRoad() {
+        return idRoad;
+    }
 
+    public int getStartRow() {
+        return startRow;
+    }
 
+    public int getStartColumn() {
+        return startColumn;
+    }
 
+    public int getRoadLength() {
+        return roadLength;
+    }
 
+    public int getEndTime() {
+        return endTime;
+    }
+
+    public int getEndRow() {
+        return endRow;
+    }
+
+    public int getEndColumn() {
+        return endColumn;
+    }
+
+    public int getStartTime() {
+        return startTime;
+    }
+
+    public static int getRoadsCout() {
+        return roadsCout;
+    }
 }
