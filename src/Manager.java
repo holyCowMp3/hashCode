@@ -23,7 +23,10 @@ public class Manager {
                     Math.abs(road.getStartColumn() - road.getEndColumn()) + Math.abs(road.getStartRow() - road.getEndRow());
             if (way < vehicle.getTtl() && way < road.getEndTime() - road.getStartTime())
                 if (vehicle.getRoads().size() > 0)
-                    if (!(vehicle.getRoads().get(vehicle.getRoads().size()-1).getEndTime() < road.getStartTime()))
+                    if (!(vehicle.getRoads().get(vehicle.getRoads().size()-1).getEndTime() < road.getStartTime())) {
+                        vehicle.rideRoad(road, way);
+                    }
+            vehicle.rideRoad(road, way);
 
         }
         
