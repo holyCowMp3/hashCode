@@ -6,10 +6,13 @@ public class Vehicle {
     private int ttl;
     private ArrayList<Road> roads;
 
+
+
     public Vehicle(int steps){
         row = 0;
         column = 0;
         ttl = steps;
+
         roads = new ArrayList<Road>();
 
     }
@@ -33,6 +36,14 @@ public class Vehicle {
 
     public ArrayList<Road> getRoads() {
         return roads;
+    }
+
+    public int getTtl() {
+        return ttl;
+    }
+
+    public void setTtl(int ttl) {
+        this.ttl = ttl;
     }
 
     public void addRoad(Road road){

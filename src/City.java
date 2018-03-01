@@ -10,6 +10,8 @@ public class City {
     private int steps;
     private ArrayList<Road> roads;
 
+    private ArrayList<Vehicle> vehicles =
+
     public City(List<String> list) {
         String[] strings = list.get(0).split(" ");
         rows = Integer.parseInt(strings[1]);
