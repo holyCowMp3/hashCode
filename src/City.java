@@ -26,4 +26,32 @@ public class City {
         list.stream().forEach(i -> roads.add(new Road(i)));
 
     }
+
+    public ArrayList<Road> getRoads() {
+        return roads;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public int getColumns() {
+        return columns;
+    }
+
+    public int getRides() {
+        return rides;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getSteps() {
+        return steps;
+    }
+
+    public int getVehicles() {
+        return vehicles;
+    }
 }
