@@ -22,6 +22,14 @@ public class Vehicle {
         return row;
     }
 
+    public void rideRoad(Road road){
+        int stepsToStart = Math.abs(road.getStartRow()-row) + Math.abs(road.getStartColumn()-column);
+        row = road.getStartRow();
+        column = road.getStartColumn();
+        ttl-=stepsToStart;
+
+    }
+
     public void setRow(int row) {
         this.row = row;
     }
