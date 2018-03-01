@@ -1,4 +1,4 @@
-import javafx.beans.property.StringProperty;
+
 
 public class Road {
 
@@ -6,16 +6,20 @@ public class Road {
    private int startColumn;
    private int endRow;
    private int endColumn;
-   private int start
+   private int startTime;
+   private int endTime;
    private int roadLength;
+
 
     public Road(String input) {
         String[] strings = input.split(" ");
-        this.startRow = startRow;
-        this.startColumn = startColumn;
-        this.endRow = endRow;
-        this.endColumn = endColumn;
-        roadLength.
+        this.startRow = Integer.parseInt(strings[0]);
+        this.startColumn = Integer.parseInt(strings[1]);
+        this.endRow = Integer.parseInt(strings[2]);
+        this.endColumn = Integer.parseInt(strings[3]);
+        this.startTime = Integer.parseInt(strings[4]);
+        this.endTime = Integer.parseInt(strings[5]);
+        roadLength
     }
 
     Road(){
