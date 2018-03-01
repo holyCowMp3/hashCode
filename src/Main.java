@@ -11,7 +11,9 @@ public class Main {
         try {
             List<String> list = Files.readAllLines(Paths.get("a_example.in")).stream().collect(Collectors.toList());
             City city = new City(list);
-            
+
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
