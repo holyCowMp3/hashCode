@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class City {
     private int rows;
@@ -16,10 +19,11 @@ public class City {
         String[] strings = list.get(0).split(" ");
         rows = Integer.parseInt(strings[1]);
         columns = Integer.parseInt(strings[2]);
-        vehicles = Integer.parseInt(strings[3]);
+
         rides = Integer.parseInt(strings[4]);
         bonus = Integer.parseInt(strings[5]);
         steps = Integer.parseInt(strings[6]);
+        this.vehicles.addAll(IntStream.range(0, Integer.parseInt(strings[3])).mapToObj( i -> new Vehicle(this.steps)).collect(Collectors.toList()));
         System.out.println(list.get(0));
         list.remove(0);
         System.out.println(list.get(0));
