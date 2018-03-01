@@ -4,14 +4,16 @@ public class Vehicle {
     private ArrayList<Road> roads;
 
     public Vehicle(){
+
     }
 
 
     public ArrayList<Road> getRoads() {
+
         return roads;
     }
 
-    public boolean addRoad(Road road){
+    public void addRoad(Road road){
         roads.add(road);
     }
 }
