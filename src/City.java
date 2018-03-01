@@ -4,13 +4,13 @@ import java.util.List;
 public class City {
     private int rows;
     private int columns;
-    private int vehicles;
+    private int numberOfVehicles;
     private int rides;
     private int bonus;
     private int steps;
     private ArrayList<Road> roads;
 
-    private ArrayList<Vehicle> vehicles =
+    private ArrayList<Vehicle> vehicles;
 
     public City(List<String> list) {
         String[] strings = list.get(0).split(" ");
