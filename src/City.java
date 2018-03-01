@@ -16,7 +16,7 @@ public class City {
         String[] strings = list.get(0).split(" ");
         rows = Integer.parseInt(strings[1]);
         columns = Integer.parseInt(strings[2]);
-        vehicles = Integer.parseInt(strings[3]);
+        numberOfVehicles = Integer.parseInt(strings[3]);
         rides = Integer.parseInt(strings[4]);
         bonus = Integer.parseInt(strings[5]);
         steps = Integer.parseInt(strings[6]);
@@ -24,7 +24,10 @@ public class City {
         list.remove(0);
         System.out.println(list.get(0));
         list.stream().forEach(i -> roads.add(new Road(i)));
-
+        vehicles = new ArrayList<>();
+        for (int i = 0; i < numberOfVehicles; i++) {
+            vehicles.add(i, new Vehicle(steps));
+        }
     }
 
     public ArrayList<Road> getRoads() {
