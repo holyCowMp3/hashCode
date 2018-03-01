@@ -17,12 +17,12 @@ public class City {
 
     public City(List<String> list) {
         String[] strings = list.get(0).split(" ");
-        this.rows = Integer.parseInt(strings[1]);
-        this.columns = Integer.parseInt(strings[2]);
-        this.rides = Integer.parseInt(strings[4]);
-        this.bonus = Integer.parseInt(strings[5]);
-        this.steps = Integer.parseInt(strings[6]);
-        this.vehicles.addAll(IntStream.range(0, Integer.parseInt(strings[3])).mapToObj( i -> new Vehicle(this.steps)).collect(Collectors.toList()));
+        this.rows = Integer.parseInt(strings[0]);
+        this.columns = Integer.parseInt(strings[1]);
+        this.rides = Integer.parseInt(strings[3]);
+        this.bonus = Integer.parseInt(strings[4]);
+        this.steps = Integer.parseInt(strings[5]);
+        this.vehicles.addAll(IntStream.range(0, Integer.parseInt(strings[2])).mapToObj( i -> new Vehicle(this.steps)).collect(Collectors.toList()));
         System.out.println(list.get(0));
         list.remove(0);
         System.out.println(list.get(0));
