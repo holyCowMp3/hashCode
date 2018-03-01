@@ -12,7 +12,6 @@ public class Vehicle {
         this.row = 0;
         this.column = 0;
         this.ttl = steps;
-
         this.roads = new ArrayList<Road>();
 
     }
@@ -20,6 +19,14 @@ public class Vehicle {
 
     public int getRow() {
         return row;
+    }
+
+    public void rideRoad(Road road, int steps){
+        addRoad(road);
+        ttl-=steps;
+        this.row=road.getEndRow();
+        this.column=road.getEndColumn();
+
     }
 
     public void setRow(int row) {
