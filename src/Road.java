@@ -19,7 +19,11 @@ public class Road {
         this.startTime = Integer.parseInt(strings[4]);
         this.endTime = Integer.parseInt(strings[5]);
         this.roadLength = Math.abs(endRow-startRow) + Math.abs(endColumn-endColumn);
+
     }
+
+
+
 
 
 }
