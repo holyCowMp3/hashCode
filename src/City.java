@@ -8,7 +8,7 @@ public class City {
     private int rides;
     private int bonus;
     private int steps;
-    private ArrayList<Road>;
+    private ArrayList<Road> roads;
 
     public City(List<String> list) {
         String[] strings = list.get(0).split(" ");
@@ -19,6 +19,6 @@ public class City {
         bonus = Integer.parseInt(strings[5]);
         steps = Integer.parseInt(strings[6]);
         list.remove(0);
-        list.
+        list.stream().forEach(i -> roads.add(new Road(i)));
     }
 }
