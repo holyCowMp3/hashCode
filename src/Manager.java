@@ -35,11 +35,12 @@ public class Manager {
 
 
     public void out() throws Exception{
-        for (int j=0; j<city.getVehicles().size(); j++ ){
-            city.getVehicles().stream().forEach(i -> lines.add(i.getRoads().size() + i.getRoads().stream().map(z -> z.getIdRoad() ).collect(Collectors.joining(" "))));
-        }
-        Path file = Paths.get(Manager.class.getResource("1.out").toURI());
-        Files.write(file,lines);
+
+
+        city.getVehicles().stream().forEach(i -> System.out.println(i.toString()));
+
+//   Path file = Paths.get(Manager.class.getResource("1.out").toURI());
+      //  Files.write(file,lines);
     }
 
 

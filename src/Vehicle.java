@@ -56,4 +56,15 @@ public class Vehicle {
     public void addRoad(Road road){
         roads.add(road);
     }
+
+    @Override
+    public String toString() {
+        String lines = new String(roads.size() + " ");
+        for (Road a: roads) {
+            lines.concat(a.getIdRoad() +" ");
+        }
+        return lines;
+
+
+    }
 }
