@@ -9,10 +9,10 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            List<String> list = Files.readAllLines(Paths.get("a_example.in")).stream().collect(Collectors.toList());
+            List<String> list = Files.readAllLines(Paths.get("b_should_be_easy.in")).stream().collect(Collectors.toList());
             City city = new City(list);
             Manager manager = new Manager(city);
-
+            manager.start();
             manager.out();
 
 

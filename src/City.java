@@ -30,7 +30,7 @@ public class City {
         list.remove(0);
 
         list.stream().forEach(i -> roads.add(new Road(i)));
-        this.roads.sort((a,b) -> a.getStartTime()-b.getStartTime());
+        //this.roads.sort((a,b) -> a.getStartTime()-b.getStartTime());
 
     }
 

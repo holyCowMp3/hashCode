@@ -54,16 +54,19 @@ public class Vehicle {
     }
 
     public void addRoad(Road road){
-        roads.add(road);
+        if (!roads.contains(road)) {
+            roads.add(road);
+        }
     }
 
     @Override
     public String toString() {
-        String lines = new String(roads.size() + " ");
+        StringBuffer sb = new StringBuffer();
+        sb.append(roads.size()+" ");
         for (Road a: roads) {
-            lines.concat(a.getIdRoad() +" ");
+            sb.append(a.getIdRoad() + " ");
         }
-        return lines;
+        return sb.toString();
 
 
     }
