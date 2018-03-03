@@ -26,7 +26,7 @@ public class Manager {
 
 
     public Road findNearest  (Vehicle vehicle, ArrayList<Road> roads){
-        try {
+
        ArrayList<Road> nearestRoads = roads;
         Comparator<Road> comparator = (i,j) ->
                 (Math.abs(i.getStartRow()-vehicle.getRow()) + Math.abs(i.getStartColumn()-vehicle.getColumn()) - (Math.abs(j.getStartRow()-vehicle.getRow()) + Math.abs(j.getStartColumn()-vehicle.getColumn())));
@@ -46,6 +46,7 @@ public class Manager {
                     return false;
                 }
             }).collect(Collectors.toList());
+            ridersRoads.sort((i,j) -> i.getEndTime()-j.getEndTime());
             if (ridersRoads.size()!=0){
             vehicle.rideRoad(ridersRoads.get(0), steps);
             return vehicle.getRoads().get(0);
@@ -53,11 +54,7 @@ public class Manager {
             }else {
 
                 return null;
-            }}
-            catch (ConcurrentModificationException e){
-                return null;
             }
-
 
     }
     public void start(){
