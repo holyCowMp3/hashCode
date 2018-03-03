@@ -9,13 +9,16 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            List<String> list = Files.readAllLines(Paths.get("e_high_bonus.in")).stream().collect(Collectors.toList());
+            List<String> list = Files.readAllLines(Paths.get("c_no_hurry.in")).stream().collect(Collectors.toList());
+            System.out.println(list.get(0));
             City city = new City(list);
             Manager manager = new Manager(city);
-
+            System.out.println(city.getVehicles().size());
 
             manager.start();
+            manager.start();
             manager.out();
+
 
         } catch (Exception e) {
             e.printStackTrace();

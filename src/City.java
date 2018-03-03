@@ -21,7 +21,7 @@ public class City {
         this.rides = Integer.parseInt(strings[3]);
         this.bonus = Integer.parseInt(strings[4]);
         this.steps = Integer.parseInt(strings[5]);
-
+        System.out.println(strings[2]);
         for (int i =0 ; i < Integer.parseInt(strings[2]);i++){
             this.vehicles.add(new Vehicle(steps));
         }

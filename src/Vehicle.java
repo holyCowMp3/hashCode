@@ -67,6 +67,7 @@ public class Vehicle {
     public String toString() {
 
         StringBuffer sb = new StringBuffer();
+        sb.ensureCapacity(100000);
         sb.append(roads.size()+" ");
         if (roads.size()!=0) {
             for (Road a : roads) {
