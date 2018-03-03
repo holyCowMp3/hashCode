@@ -7,11 +7,10 @@ import java.util.stream.IntStream;
 public class City {
     private int rows;
     private int columns;
-
     private int rides;
     private int bonus;
     private int steps;
-    private ArrayList<Road> roads = new ArrayList<>();
+    public static ArrayList<Road> roads = new ArrayList<>();
 
     private ArrayList<Vehicle> vehicles = new ArrayList<>();
 
@@ -30,6 +29,7 @@ public class City {
         list.remove(0);
 
         list.stream().forEach(i -> roads.add(new Road(i)));
+
         //this.roads.sort((a,b) -> a.getStartTime()-b.getStartTime());
 
     }

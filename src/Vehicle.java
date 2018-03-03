@@ -21,11 +21,15 @@ public class Vehicle {
         return row;
     }
 
-    public void rideRoad(Road road, int steps){
+    public  synchronized Vehicle rideRoad(Road road, int steps){
         addRoad(road);
-        ttl-=steps;
+        if (road!=null){
+        setTtl(this.ttl-=steps);
         this.row=road.getEndRow();
         this.column=road.getEndColumn();
+        City.roads.remove(road);
+        return this;}
+        else return null;
 
     }
 
@@ -61,13 +65,17 @@ public class Vehicle {
 
     @Override
     public String toString() {
+
         StringBuffer sb = new StringBuffer();
         sb.append(roads.size()+" ");
-        for (Road a: roads) {
-            sb.append(a.getIdRoad() + " ");
+        if (roads.size()!=0) {
+            for (Road a : roads) {
+
+                sb.append(a.getIdRoad() + " ");
+            }
+            sb.delete(sb.toString().length()-1, sb.toString().length());
+            return sb.toString();
         }
-        return sb.toString();
-
-
+return "";
     }
 }

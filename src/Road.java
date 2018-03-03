@@ -1,6 +1,6 @@
 
 public class Road {
-   private static int roadsCout;
+   private static int roadsCout=0;
    private int idRoad;
    private int startRow;
    private int startColumn;
